@@ -72,7 +72,7 @@ display: flex;
     user-select: none;
 }
 .retangulo-menor {
-  background-color: #bdbcbc;
+  background-color: #D2D2D2;
   border: 1px solid #000000;
   width: 100%;
   height: 100%;
@@ -171,10 +171,10 @@ body.dark-mode  .retangulo-maior .retangulo-menor{
     background-color: #000000;
 }
 body.dark-mode  .retangulo-maior {
-    background-color: #7a7979;
+    background-color: #1A1919;
 }
 body.dark-mode  .retangulo-menor{
-    background-color: #1a1a1a;
+    background-color: #1f1f1f;
     color: #dad8d8;
     border: 1px solid #ffffff;
 }
@@ -197,4 +197,8 @@ body.dark-mode .imagem-centro {
     /* Opcional: Se a imagem ficar muito "brilhante",
        você pode diminuir um pouco a opacidade */
     /* opacity: 0.8; */
+}
+body.dark-mode .theme-selector .label-text{
+    color: #dad8d8;
+
 }
