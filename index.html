@@ -37,7 +37,7 @@
             <div class="menu">
                 <a href="">| Projects</a>
                 <a href="">| Info</a>
-                <a href="">| Contact</a>
+                <a href="javascript:void(0)" onclick="toggleContact()">| Contact</a>
             </div>
             <img src="/assets/spray-fundo.png" class="imagem-centro" alt="imagem de fundo">
         <div class="sobre">
@@ -52,7 +52,6 @@
     <!-- Inicio aba contact (link tree)  -->
 
     <div id="contact-overlay" class="contact-overlay">
-    
     <div class="contact-modal">
         <button class="btn-fechar" onclick="toggleContact()">FECHAR [X]</button>
         
@@ -60,48 +59,28 @@
             <h2 class="contact-title">CONTACT</h2>
             
             <div class="links-lista">
-                <div class="divisor-horizontal">
-                    <a href="mailto:ivompb2000@gmail.com">ivompb2000@gmail.com</a>
-                    <span class="seta">→</span>
-                </div>
-                <div class="divisor-horizontal">
-                    <a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">LinkedIn</a>
-                    <span class="seta">→</span>
-                </div>
-                </div>
-        </div>
+    <div class="divisor-horizontal">
+        <a href="javascript:void(0)" onclick="copyEmail()">
+            E-MAIL
+        </a>
+    </div>
+    
+    <div class="divisor-horizontal">
+        <a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">LINKEDIN</a>
+    </div>
+
+    <div class="divisor-horizontal">
+        <a href="https://github.com/IvoDMello" target="_blank">GITHUB</a>
+    </div>
+
+    <div class="divisor-horizontal">
+        <a href="https://www.instagram.com/ivodmello/" target="_blank">INSTAGRAM</a>
+    </div>
+
+    <div class="divisor-horizontal">
+        <a href="https://wa.me/21971957245" target="_blank">WHATSAPP</a>
     </div>
 </div>
-
-    <!--
-     <div class="contact">
-        <h2>Contact</h2>
-        
-        <div class="divisor-horizontal">
-            <a href="mailto:ivompb2000@gmail.com">ivompb2000@gmail.com</a>
-            <img src="" alt="Imagem Email">
-        </div>
-        
-        <div class="divisor-horizontal">
-            <a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">in/ivobarbosadev/</a>
-            <img src="" alt="Imagem LinkedIn">
-        </div>
-      
-        <div class="divisor-horizontal">
-            <a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">GitHub</a>
-            <img src="" alt="Imagem GitHub">
-        </div>
-        
-        <div class="divisor-horizontal">
-            <a href="https://www.instagram.com/ivodmello/" target="_blank">Instagram</a>
-            <img src="" alt="Imagem Instagram">
-        </div>
-        
-        <div class="divisor-horizontal">
-            <a href="https://wa.me/21971957245" target="_blank">WhatsApp</a>
-            <img src="" alt="Imagem WhatsApp">
-        </div>
-     </div>-->
     <script src="script.js"></script>
 </body>
 
