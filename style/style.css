@@ -1,177 +1,275 @@
+/* Reset básico para remover margens e padronizar box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Garante que a página ocupe toda a tela */
 html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden; /* Evita barras de rolagem se não houver conteúdo extra */
+    overflow: hidden; /* Evita barras de rolagem */
 }
 
+/* Container principal da página */
 .retangulo-maior {
+
 background-color: #C9C9C9;
-width: 100vw;  /* 100% da largura da tela */
-height: 100vh; /* 100% da altura da tela */
+
+width: 100vw;  /* largura total da viewport */
+height: 100vh; /* altura total da viewport */
     
-padding: 30px; /* Margem interna para o retângulo menor aparecer */
+padding: 30px; /* cria espaço interno para mostrar o retângulo menor */
+
 display: flex;
 }
 
+/* Seletor de tema posicionado lateralmente e rotacionado */
 .theme-selector {
+
     position: absolute;
-    left: -67px; /* Ajuste fino conforme o tamanho da fonte */
+
+    left: -67px;
     top: 75%;
+
     transform: translateY(-50%) rotate(-90deg);
+
     display: flex;
     align-items: center;
+
     gap: 15px;
+
     z-index: 10;
 }
+
+/* Estrutura de cada opção de tema */
 .theme-option {
+
     display: flex;
     align-items: center;
+
     gap: 4px;
+
     cursor: pointer;
+
     font-family: 'Inter', sans-serif;
+
     font-weight: 600;
     font-size: 12px;
+
     letter-spacing: 0.1em;
 }
 
-/* Esconde o rádio padrão e estiliza o customizado */
+/* Esconde o radio button padrão */
 .theme-option input {
     display: none;
 }
 
+/* Caixa visual customizada do radio */
 .checkmark {
+
     width: 12px;
     height: 12px;
+
     border: 1px solid #000;
+
     display: inline-block;
+
     position: relative;
 }
-/* O "X" ou preenchimento quando selecionado */
+
+/* Quadrado preenchido quando selecionado */
 .theme-option input:checked + .checkmark::after {
+
     content: '';
+
     position: absolute;
+
     width: 6px;
     height: 6px;
+
     background: #000;
+
     top: 2px;
     left: 2px;
 }
 
+/* Linha separadora entre DARK e LIGHT */
 .divisor-vertical {
+
     width: 30px;
     height: 1px;
+
     background-color: #000;
 }
 
+/* Impede seleção de texto no label */
 .label-text {
     user-select: none;
 }
+
+/* Container principal do conteúdo */
 .retangulo-menor {
+
   background-color: #D2D2D2;
+
   border: 1px solid #000000;
+
   width: 100%;
   height: 100%;
+
   display: flex;
+
   flex-direction: column;
-  justify-content: space-between; /* Empurra o "Sobre" para o rodapé */
+
+  justify-content: space-between;
+
   padding: 60px;
 }
+
+/* Imagem decorativa central */
 .imagem-centro {
+
     position: absolute;
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centralização perfeita */
-    /* Exemplo A: Ocupar 60% da LARGURA da tela (ideal para imagens horizontais) */
-    width: 80vw; 
-    
-    /* Exemplo B: Ocupar 60% da ALTURA da tela (ideal para imagens verticais) */
-    /* height: 60vh; width: auto; */ 
-    
-    /* Garante que a imagem não distorça */
-    height: auto; 
-    
-    /* Evita que a imagem "atropele" o texto em telas pequenas */
-    max-width: 90%; 
-    max-height: 70%; 
-    
-    z-index: 1; /* Mantém a imagem acima do fundo */
+
+    transform: translate(-50%, -50%);
+
+    width: 80vw;
+
+    height: auto;
+
+    max-width: 90%;
+    max-height: 70%;
+
+    z-index: 1;
 }
 
+/* Nome principal */
 .nome {
+
 font-family: 'Inter';
+
 font-weight: 200;
+
 font-size: clamp(40px, 8vw, 65px);
+
 letter-spacing: 0.1em;
+
 color: #000000;
+
 margin-bottom: 0.01em;
 }
 
+/* Subtítulo */
 .titulo {
+
 font-family: 'Inter';
+
 font-weight: 400;
-font-size: clamp(18px, 3vw, 26px); /* Fonte responsiva */
+
+font-size: clamp(18px, 3vw, 26px);
+
 letter-spacing: 0.1em;
+
 color: #666666;
 }
 
+/* Menu lateral */
 .menu {
+
 display: flex;
+
 flex-direction: column;
-gap: 15px;             /* Espaço entre os links */
+
+gap: 15px;
+
 margin-bottom: 20px;
+
 font-family: 'Inter';
-font-style: normal;
+
 font-weight: 600;
+
 font-size: 30px;
+
 line-height: 50px;
-/* or 167% */
+
 letter-spacing: 0.1em;
+
 color: #000000;
 }
+
+/* Estilo dos links do menu */
 .menu a {
+
     font-family: 'Inter';
+
     font-weight: 600;
+
     font-size: 30px;
+
     color: black;
+
     text-decoration: none;
+
     letter-spacing: 0.1em;
+
     transition: 0.2s;
 }
+
+/* Efeito hover */
 .menu a:hover {
+
     opacity: 0.6;
+
     padding-left: 10px;
 }
+
+/* Texto de apresentação */
 .sobre {
+
     font-family: 'Inter';
+
     font-weight: 400;
+
     font-size: 20px;
+
     line-height: 1.5;
+
     letter-spacing: 0.1em;
+
     color: #333;
+
     max-width: 600px;
-    align-self: flex-end; /* Alinha à esquerda, ou use flex-end para a direita */
+
+    align-self: flex-end;
 }
 
+/* =============================== */
+/* DARK MODE */
+/* =============================== */
 
-/* Estilos para o modo escuro */
-body.dark-mode  .retangulo-maior .retangulo-menor{
-    background-color: #000000;
-}
 body.dark-mode  .retangulo-maior {
     background-color: #1A1919;
 }
+
 body.dark-mode  .retangulo-menor{
+
     background-color: #1f1f1f;
+
     color: #dad8d8;
+
     border: 1px solid #ffffff;
 }
 
-body.dark-mode .nome, body.dark-mode .menu a, body.dark-mode .sobre {
+/* Ajusta cores do texto */
+body.dark-mode .nome,
+body.dark-mode .menu a,
+body.dark-mode .sobre {
+
     color: #dad8d8;
 }
 
@@ -179,107 +277,89 @@ body.dark-mode .titulo {
     color: #dad8d8;
 }
 
-body.dark-mode .theme-option input:checked + .checkmark::after {
-    background: #fff;
-}
+/* Inverte a imagem para funcionar no dark */
 body.dark-mode .imagem-centro {
-    /* Inverte as cores (preto vira branco) */
-    filter: invert(1); 
-    
-    /* Opcional: Se a imagem ficar muito "brilhante",
-       você pode diminuir um pouco a opacidade */
-    /* opacity: 0.8; */
+
+    filter: invert(1);
 }
-body.dark-mode .theme-selector .label-text{
-    color: #dad8d8;
-}
-/* Responsividade para telas menores */
+
+/* =============================== */
+/* RESPONSIVIDADE */
+/* =============================== */
+
 @media (max-width: 768px) {
+
     .retangulo-menor {
         padding: 30px;
     }
+
     .menu {
         font-size: 20px;
         line-height: 30px;
     }
+
     .sobre {
         font-size: 16px;
     }
 }
-/* Inicio Link Tree */
+
+/* =============================== */
+/* MODAL DE CONTATO */
+/* =============================== */
+
+/* Fundo escurecido */
 .contact-overlay {
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100vw;
     height: 100vh;
+
     background-color: rgba(0, 0, 0, 0.7);
-    display: none; 
+
+    display: none;
+
     justify-content: center;
+
     align-items: center;
+
     z-index: 9999;
 }
 
+/* Caixa do modal */
 .contact-modal {
+
     background-color: #b9b7b7;
+
     border: 1px solid #000;
+
     padding: 50px 40px;
+
     width: 90%;
+
     max-width: 500px;
+
     position: relative;
 }
 
-.contact-title {
-    font-family: 'Inter';
-    font-weight: 200;
-    font-size: 40px;
-    text-align:;
-    letter-spacing: 0.1em;
-    margin-bottom: 40px;
-    color: #000;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    text-decoration-line: underline;
-
-}
-
-.divisor-horizontal {
-    background-color: #C9C9C9;
-    border: 1px solid #000;
-    margin-bottom: 12px;
-    display: flex;
-    transition: 0.2s;
-    
-}
-
-.divisor-horizontal:hover {
-    background-color: #000;
-}
-
-.divisor-horizontal a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    font-family: 'Inter';
-    font-size: 18px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    width: 100%; 
-    height: 100%;
-    padding: 15px 20px; 
-}
-.divisor-horizontal:hover a {
-    color: #fff;
-}
-
-
+/* Botão de fechar */
 .btn-fechar {
+
     position: absolute;
+
     top: 15px;
     right: 20px;
+
     background: none;
+
     border: none;
+
     font-family: 'Inter';
+
     font-weight: 600;
+
     cursor: pointer;
 }
