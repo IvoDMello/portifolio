@@ -263,7 +263,7 @@ body.dark-mode .theme-selector .label-text {
     font-family: 'Inter';
     font-weight: 200;
     font-size: 40px;
-    text-align:;
+    text-align: center;
     letter-spacing: 0.1em;
     margin-bottom: 40px;
     color: #000;
@@ -312,4 +312,109 @@ body.dark-mode .theme-selector .label-text {
     font-family: 'Inter';
     font-weight: 600;
     cursor: pointer;
+}
+/* Estilos específicos para a página Info*/
+.btn-back {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 30px;
+}
+/* Garante que o retângulo menor seja a base de tudo */
+.retangulo-menor_info {
+    background-color: #D2D2D2;
+    border: 1px solid #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Mude de space-between para flex-start */
+    justify-content: flex-start; 
+    padding: 60px;
+    position: relative;
+    overflow: hidden; /* Evita que a imagem ultrapasse os limites do retângulo */
+}
+
+/* A imagem continua centralizada e ao fundo */
+.imagem-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Fica atrás do texto */
+    opacity: 0.6; /* Ajuste se quiser mais sutil */
+    pointer-events: none; /* Evita que a imagem atrapalhe cliques */
+}
+
+/* Container de conteúdo que "flutua" sobre a imagem */
+.info-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    /* Remova o space-between para o card não fugir para o rodapé */
+    justify-content: flex-start; 
+    height: 100%;
+}
+
+.info-title {
+    margin-top: 10vh; /* Ajuste aqui para subir/descer o título */
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+    color: #000;
+}
+
+.info-card {
+    /*primeiro retangulo para o numero e o grafico*/
+    box-sizing: border-box;
+    width: 380px;  
+    height: 120px; 
+    background: #D9D9D9;
+    border: 2px solid #000000;
+    border-radius: 13px;
+    padding: 10px 20px;
+    margin-top: 40px; 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Container do lado direito */
+.card-info-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* Controla a proximidade total entre imagem e texto */
+    gap: 2px; 
+}
+
+.card-num { 
+    font-size: 60px; 
+    font-weight: 600; 
+    line-height: 1; /* Garante que o número não crie espaços fantasmas */
+}
+
+.grafico-linha {
+    width: auto;      /* Mantém a proporção */
+    max-height: 60px; /* Garante que a imagem não "vaze" do retângulo de 108px */
+}
+
+.card-desc { 
+    font-size: 28px; 
+    text-align: right; /* Alinha o texto à direita para casar com o grupo */
+}
+/* Modo Escuro info*/
+body.dark-mode .info-title, 
+body.dark-mode .info-card {
+    color: #dad8d8;
+    border-color: #ffffff;
+}
+body.dark-mode .imagem-centro {
+    filter: invert(1);
 }
