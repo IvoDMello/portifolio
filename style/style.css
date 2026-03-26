@@ -348,7 +348,7 @@ body.dark-mode .theme-selector .label-text {
 }
 
 /* Container de conteúdo que "flutua" sobre a imagem */
-.info-container {
+.info-container-linha1 {
     position: relative;
     z-index: 2;
     display: flex;
@@ -356,6 +356,8 @@ body.dark-mode .theme-selector .label-text {
     /* Remova o space-between para o card não fugir para o rodapé */
     justify-content: flex-start; 
     height: 100%;
+    display: inline-block; /* Garante que o conteúdo se ajuste ao tamanho do texto */
+    vertical-align: top;
 }
 
 .info-title {
