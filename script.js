@@ -22,6 +22,12 @@ function toggleContact() {
     }
 }
 
+// Fechar o contato ao clicar no botão de fechar
+document.getElementById('close-contact').addEventListener('click', () => {
+    document.getElementById('contact-overlay').style.display = 'none';
+});
+
+
 // Opcional: Fechar se clicar no fundo escuro (fora da caixinha)
 window.onclick = function(event) {
     const overlay = document.getElementById('contact-overlay');

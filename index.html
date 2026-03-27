@@ -1,161 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <!-- Configuração básica de charset -->
     <meta charset="UTF-8">
-
-    <!-- Faz o layout funcionar corretamente em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Título da página (aparece na aba do navegador) -->
     <title>Ivo Barbosa</title>
-
-    <!-- Importa o arquivo de estilos CSS -->
     <link rel="stylesheet" href="/style/style.css">
-
-    <!-- Importa a fonte Inter do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- Container principal da página (background externo) -->
     <div class="retangulo-maior">
-
-        <!-- Seletor de tema (Dark / Light) -->
         <div class="theme-selector">
-
-        <!-- Opção de tema DARK -->
-        <label class="theme-option">
-            <span class="label-text">DARK</span>
-
-            <!-- Radio button para seleção do tema -->
-            <input type="radio" name="theme" value="dark">
-
-            <!-- Elemento visual do checkbox customizado -->
-            <span class="checkmark"></span>
-        </label>
-
-        <!-- Linha divisória entre as opções -->
-        <div class="divisor-vertical"></div>
-
-        <!-- Opção de tema LIGHT (padrão selecionado) -->
-        <label class="theme-option">
-            <span class="label-text">LIGHT</span>
-
-            <!-- Radio selecionado por padrão -->
-            <input class="checkbox" type="radio" name="theme" value="light" checked>
-
-            <!-- Checkbox customizado -->
-            <span class="checkmark"></span>
-        </label>
-
+            <label class="theme-option">
+                <span class="label-text">DARK</span>
+                <input type="radio" name="theme" value="dark">
+                <span class="checkmark"></span>
+            </label>
+            <div class="divisor-vertical"></div>
+            <label class="theme-option">
+                <span class="label-text">LIGHT</span>
+                <input class="checkbox" type="radio" name="theme" value="light" checked>
+                <span class="checkmark"></span>
+            </label>
         </div>
 
-        <!-- Retângulo interno que contém o conteúdo principal -->
         <div class="retangulo-menor">
-        
-            <!-- Parte superior com nome e título -->
             <div class="conteudo-topo">
-
-                <!-- Nome principal -->
                 <h1 class="nome">Ivo Barbosa</h1>
-
-                <!-- Subtítulo / cargo -->
                 <h2 class="titulo">Data Analyst / Developer</h2>        
-
             </div>
 
-            <!-- Menu de navegação -->
             <div class="menu">
-
-                <!-- Link para projetos -->
                 <a href="">| Projects</a>
-
-                <!-- Link para página de informações -->
                 <a href="info.html">| Info</a>
-
-                <!-- Abre o modal de contato -->
                 <a href="javascript:void(0)" onclick="toggleContact()">| Contact</a>
-
             </div>
 
-            <!-- Imagem decorativa central -->
             <img src="/assets/spray-fundo.png" class="imagem-centro" alt="imagem de fundo">
 
-        <!-- Texto de apresentação -->
-        <div class="sobre">
-
-            <p>
-        Born in 2000,<br>
-        I build simple tools and analyze data to find useful insights.<br><br>
-        Currently focused on data analysis and web development.
-            </p>
-
-        </div>
-
+            <div class="sobre">
+                <p>
+                    Born in 2000,<br>
+                    I build simple tools and analyze data to find useful insights.<br><br>
+                    Currently focused on data analysis and web development.
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- Início do modal de contato (estilo Linktree) -->
     <div id="contact-overlay" class="contact-overlay">
+        <div class="contact-modal">
+            <button class="btn-fechar" onclick="toggleContact()">FECHAR [X]</button>
+            <div class="contact-content">
+                <h2 class="contact-title">CONTACT</h2>
+                <div class="links-lista">
+                    <div class="divisor-horizontal"><a href="javascript:void(0)" onclick="copyEmail()">E-MAIL</a></div>
+                    <div class="divisor-horizontal"><a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">LINKEDIN</a></div>
+                    <div class="divisor-horizontal"><a href="https://github.com/IvoDMello" target="_blank">GITHUB</a></div>
+                    <div class="divisor-horizontal"><a href="https://www.instagram.com/ivodmello/" target="_blank">INSTAGRAM</a></div>
+                    <div class="divisor-horizontal"><a href="https://wa.me/21971957245" target="_blank">WHATSAPP</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="contact-modal">
-
-        <!-- Botão para fechar o modal -->
-        <button class="btn-fechar" onclick="toggleContact()">FECHAR [X]</button>
+   
+    <div class="contact-modal info-modal-largo"> 
         
         <div class="contact-content">
-
-            <!-- Título da seção -->
-            <h2 class="contact-title">CONTACT</h2>
-            
-            <!-- Lista de links -->
-            <div class="links-lista">
-
-    <!-- Link de e-mail (usa função JS para copiar) -->
-    <div class="divisor-horizontal">
-        <a href="javascript:void(0)" onclick="copyEmail()">
-            E-MAIL
-        </a>
-    </div>
-    
-    <!-- LinkedIn -->
-    <div class="divisor-horizontal">
-        <a href="https://www.linkedin.com/in/ivobarbosadev/" target="_blank">LINKEDIN</a>
-    </div>
-
-    <!-- GitHub -->
-    <div class="divisor-horizontal">
-        <a href="https://github.com/IvoDMello" target="_blank">GITHUB</a>
-    </div>
-
-    <!-- Instagram -->
-    <div class="divisor-horizontal">
-        <a href="https://www.instagram.com/ivodmello/" target="_blank">INSTAGRAM</a>
-    </div>
-
-    <!-- WhatsApp -->
-    <div class="divisor-horizontal">
-        <a href="https://wa.me/21971957245" target="_blank">WHATSAPP</a>
-    </div>
-
-    
-</div>
-
-        <!-- Conteúdo do modal de info -->
-        <div id="info-overlay" class="info-overlay"> 
-        
-
-         
-
+            <h2 class="contact-title">INFO DASHBOARD</h2>
+            <div class="dashboard-grid">
+                <div class="dash-card card-erp">
+                    <span class="card-label">ERP EXPERIENCE</span>
+                    <div class="erp-main">
+                        <span class="big-number">05</span>
+                        <span class="small-text">YEARS OF<br>EXPERTISE</span>
+                    </div>
+                </div>
+                <div class="dash-card card-stack">
+                    <span class="card-label">TECHNICAL STACK</span>
+                </div>
+                <div class="dash-card card-extra">
+                    <span class="card-label">CERTIFICATIONS</span>
+                </div>
+            </div>
         </div>
-
     </div>
-</div>
+    
 
-    <!-- Importa o arquivo JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
