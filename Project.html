@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ivo Barbosa</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="retangulo-maior">
+        <div class="theme-selector">
+            <label class="theme-option">
+                <span class="label-text">DARK</span>
+                <input type="radio" name="theme" value="dark">
+                <span class="checkmark"></span>
+            </label>
+            <div class="divisor-vertical"></div>
+            <label class="theme-option">
+                <span class="label-text">LIGHT</span>
+                <input type="radio" name="theme" value="light" checked>
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div class="retangulo-menor_info">
+            <img src="/assets/spray-fundo.png" class="imagem-centro" alt="imagem de fundo">
+
+            <div class="info-content">
+                <a href="index.html" class="btn-back">&lt; Back</a>
+                <h1 class="projects-page-title">Projects</h1>
+
+                <div class="projects-carousel">
+                    <button class="carousel-btn carousel-btn--prev" onclick="carouselPrev()" aria-label="Anterior">&#8592;</button>
+
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="carousel-track">
+
+                            <!-- Project 01 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 01</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                            <!-- Project 02 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 02</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                            <!-- Project 03 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 03</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                            <!-- Project 04 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 04</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                            <!-- Project 05 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 05</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                            <!-- Project 06 -->
+                            <div class="project-card">
+                                <p class="project-card-name">Project 06</p>
+                                <div class="project-card-photo">
+                                    <span class="project-card-photo-label">Foto</span>
+                                </div>
+                                <p class="project-card-desc">Descrição do que é o projeto e o que mais for o caso de mencionar neste espaço descritivo</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn carousel-btn--next" onclick="carouselNext()" aria-label="Próximo">&#8594;</button>
+                </div>
+            </div>
+
+            <footer class="info-footer">
+                <p>BUILD_VERSION: 1.0.4 // DESIGNED AND CODED BY IVO BARBOSA // &copy; 2026</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
