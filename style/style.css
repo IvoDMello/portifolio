@@ -510,7 +510,7 @@ body.dark-mode .theme-selector .label-text {
     margin-bottom: 6px;
 }
 .btn-expand {
-    background: linear-gradient(145deg, #d6d6d6, #a8a8a8);: none;
+    background: linear-gradient(145deg, #d6d6d6, #a8a8a8);
     border: 1px solid #000;
     border-radius: 4px;
     padding: 3px 10px;
